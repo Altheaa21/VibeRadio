@@ -8,8 +8,8 @@ services:
     rootDir: server
     buildCommand: npm ci --omit=dev
     startCommand: node server.mjs
-    # starter 常驻在线（约 7 美元/月）。改成 free 也能用，但闲置 15 分钟会休眠，再用要等几十秒。
-    plan: starter
+    # 免费版：闲置约 15 分钟会休眠，下次打开 App 要等几十秒唤醒（App 会自动重试）。想一直在线可改成 starter（付费）。
+    plan: free
     # 离中国大陆较近，网易云接口延迟更低；音乐本身由设备直接从网易云下载，不经过这里。
     region: singapore
     healthCheckPath: /healthz

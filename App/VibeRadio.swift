@@ -205,7 +205,7 @@ enum Vault {
             throw failure("公网服务必须使用 HTTPS")
         }
         var req = URLRequest(url: base.appendingPathComponent(route))
-        req.httpMethod = "POST"; req.timeoutInterval = 25
+        req.httpMethod = "POST"; req.timeoutInterval = 60 // 免费云端服务休眠后唤醒要几十秒
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if !cookie.isEmpty { req.setValue(cookie, forHTTPHeaderField: "X-NCM-Cookie") }
         if !bridgeToken.isEmpty { req.setValue("Bearer \(bridgeToken)", forHTTPHeaderField: "Authorization") }
