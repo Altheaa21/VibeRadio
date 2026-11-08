@@ -1,0 +1,40 @@
+.DS_Store
+.build/
+build/
+DerivedData/
+node_modules/
+.env
+.env.*
+!.env.example
+.local/
+*.xcuserstate
+xcuserdata/
+# Private collaboration workspace
+workbench/state.json
+workbench/state.json.*.tmp
+workbench/screenshots/
+# Local reference-video analysis (third-party frames and OCR)
+docs/reference-analysis/
+
+build-ios/
+
+# Private font specimens from this Mac; never distribute.
+.font-preview-cache/
+
+# Physical device build products and provisioning metadata
+build-device/
+
+# ---- 公开仓库只放 App、桥接与测试；以下为本机协作资料，不上传 ----
+docs/
+HANDOFF_CLAUDE.md
+AGENTS.md
+CLAUDE.md
+DESIGN.md
+README.md
+.impeccable/
+.claude/
+workbench/
+mobile-preview/
+*.command
+scripts/render-native-previews.*
+scripts/prepare-font-comparison.py

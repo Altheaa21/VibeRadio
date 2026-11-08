@@ -1,0 +1,16 @@
+{
+  "name": "viberadio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "board": "node workbench/server.mjs",
+    "board:context": "node workbench/context.mjs",
+    "board:test": "node --test workbench/server.test.mjs",
+    "test:ai": "sh scripts/test-ai.sh",
+    "test:voice": "sh scripts/test-voice.sh",
+    "test:companion": "sh scripts/test-companion.sh",
+    "preview:phone": "node mobile-preview/server.mjs",
+    "bridge:phone": "node scripts/phone-bridge.mjs"
+  }
+}

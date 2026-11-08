@@ -1,0 +1,23 @@
+# Render 部署：只部署网易云桥接（server/），App 本体仍在你的设备上运行。
+# 在 Render 选 New > Blueprint 并指向这个仓库即可。BRIDGE_TOKEN 由 Render 随机生成，
+# 部署后在 Render 后台的 Environment 里复制，填到 App「连接网易云」页的令牌栏。
+services:
+  - type: web
+    name: viberadio-bridge
+    runtime: node
+    rootDir: server
+    buildCommand: npm ci --omit=dev
+    startCommand: node server.mjs
+    # starter 常驻在线（约 7 美元/月）。改成 free 也能用，但闲置 15 分钟会休眠，再用要等几十秒。
+    plan: starter
+    # 离中国大陆较近，网易云接口延迟更低；音乐本身由设备直接从网易云下载，不经过这里。
+    region: singapore
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_VERSION
+        value: "22"
+      - key: BRIDGE_TOKEN
+        generateValue: true

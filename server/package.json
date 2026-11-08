@@ -1,0 +1,1 @@
+{"name":"vibe-radio-bridge","version":"0.1.0","private":true,"engines":{"node":">=20"},"type":"module","scripts":{"start":"node server.mjs","test":"node --test"},"dependencies":{"@neteasecloudmusicapienhanced/api":"4.41.1"}}

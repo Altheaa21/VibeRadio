@@ -1,0 +1,6 @@
+{
+  "tool": "image_gen",
+  "prompt": "Create a single isolated perfectly circular black vinyl LP record seen exactly orthographically from directly overhead, full circle completely visible with a little transparent padding, no perspective tilt. Realistic exceptionally refined fine concentric grooves and subtle satin black sheen. Understated medium-gray unprinted circular paper center label with a tiny real spindle hole. No text anywhere, no logo, no UI, no turntable, no needle, no extra objects. Lighting: soft broad silver reflections across black grooves, low contrast and tactile, luxurious but restrained; the physical disc remains black and its grooves can be seen. Output a high-resolution square PNG cutout with a genuinely transparent background outside the circular record and in the spindle hole. It will be a rotating native-app visual asset, so the circle must be geometrically true and the rim clean. No shadow painted outside the disc. Match the refined monochrome photographic material language of the provided app mockup, but output ONLY the complete record as an asset.",
+  "reference": "docs/design-concepts/b-cropped-dark.png",
+  "role": "rotating full vinyl asset"
+}
